@@ -1,0 +1,21 @@
+.profil{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-left: 60px;
+}
+#mainNav{
+    background-color: rgba(0, 0, 0, 0.842);
+    height: 17%;
+}
+
+.article{
+    margin-top: 10px;
+}
+
+#profile{
+   width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-left: 60px;  
+}
