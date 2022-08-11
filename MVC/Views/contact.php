@@ -18,10 +18,10 @@
             <div
                 class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/post.php">Acceuil</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about.php">A propos</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact.ph">Contactez-nous</a></li>
-                   
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">Acceuil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about">A propos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact">Contactez-nous</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/inscription">Inscrivez-vous</a></li>
                 </ul>
         </div>
         </div>

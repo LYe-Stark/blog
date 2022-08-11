@@ -1,44 +1,10 @@
 <?php
- session_start();
-function filter($text){
-    return htmlentities(htmlspecialchars($text));
-     
-}
-
-if(isset($_POST["btn"])){
-    
-    $tmpname =$_FILES["avatar-file"]["tmp_name"];
-    $image_name=$_FILES["avatar-file"]["name"];
-    $title=filter($_POST["title"]);
-    $description =filter($_POST["description"]);
-    $date =date("d-m-Y");
-    
-  $db = new PDO("mysql:host=localhost;dbname=blog","paterne","Lye2003");
-
-   
-   $id =$_SESSION["id"];
-   $_SESSION["data"]=$tmpname;
-    
-   $request =$db->prepare("insert into post(title,description,image_name,date,idU) values(?,?,?,?,?)"); 
-   $request->execute([$title,$description,$image_name,$date,$id]);
-   
-   $tabExtension = explode('.', $image_name);
-$extension = strtolower(end($tabExtension));
-//Tableau des extensions que l'on accepte
-$extensions = ['jpg', 'png', 'jpeg', 'gif'];
-if(in_array($extension, $extensions)){
-    
-     move_uploaded_file($tmpname,"./upload/".$image_name);
-}
-else{
-    echo "Mauvaise extension";
-}
-  
-   header("location:./post.php"); 
-   
-}
+session_start();
+require_once("../Controller/inscriptionController.php");
 
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -63,27 +29,36 @@ else{
                 <div class="alert alert-info absolue center" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span>Profile save with success</span></div>
             </div>
         </div>
-        <form method="POST" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
             <div class="form-row profile-row">
                 <div class="col-md-4 relative">
                     <div class="avatar">
-                        <div class="avatar-bg center" style="background-image: url(&quot;/assets/img/img_212915.png?h=bffae33205534b14b6b6a08e3dce03c6&quot;);"></div>
+                        <div class="avatar-bg center"></div>
                     </div><input type="file" class="form-control" name="avatar-file"></div>
                 <div class="col-md-8">
-                    <h1>Créez une publication&nbsp;</h1>
-                    
+                    <h1>Inscription</h1>
                     <hr>
                     <div class="form-row">
                         <div class="col-sm-12 col-md-6">
-                            <div class="form-group"><input class="form-control" placeholder="Entrez le titre de votre publication" type="text" name="title" style="width: 650px;"></div>
+                            <div class="form-group"><label>Nom :</label><input class="form-control" type="text" name="firstname"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><label>Prénom :</label><input class="form-control" type="text" name="lastname"></div>
                         </div>
                     </div>
-                    <div class="form-group"><textarea class="form-control" style="height: 250px;" name="description" placeholder="Entrez la description" ></textarea></div>
+                    <div class="form-group"><label>Email </label><input class="form-control" type="email" autocomplete="off" required="" name="email"></div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="form-group"><label>Password :</label><input class="form-control" type="password" name="password" autocomplete="off" required=""></div>
+                        </div>
+                       
+                    </div>
                     <hr>
                     <div class="form-row">
                         <div class="col-md-12 content-right">
-                            <input type="submit" class="btn btn-primary form-btn" role="button" value="PUBLIER" name="btn">
-                            <a class="btn btn-danger form-btn" role="button" href="/post.php">ANNULER</a></div>
+                            <input type="submit" class="btn btn-primary form-btn" role="button" value="Enregistrez" name="btn">
+                            <a class="btn btn-danger form-btn" role="button" href="/post">Retour</a>
+                        </div>
                     </div>
                 </div>
             </div>

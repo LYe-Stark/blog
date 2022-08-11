@@ -1,11 +1,3 @@
-<?php
-
-session_start();
-
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 
@@ -23,14 +15,14 @@ session_start();
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container"><a class="navbar-brand" href="/post.php">Vroommm</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="container"><a class="navbar-brand" href="/post">Vroommm</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div
                 class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/post.php">Acceuil</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about_user.php">A propos</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact_user.php">Contactez-nous</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/profil.php">Profil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/post">Acceuil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about_user">A propos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact_user">Contactez-nous</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/profil">Profil</a></li>
                     
                 </ul>
                 <a href="/profil.php"><img src="./upload/<?=$_SESSION['picture'];?>" alt="" class="profil"></a>
@@ -63,9 +55,7 @@ session_start();
                                     <?php
                                         $idUser=$_SESSION["idU"];
 
-                                        $publier='PUBLIER';
-                                        $db=NEW PDO('mysql:host=localhost;dbname=blog',"paterne","Lye2003");
-                                        $query=$db->query("SELECT * from post");
+                                      require_once("../Model/postModel.php");
                                         
                                         while($data=$query->fetch()) { 
                                     ?>

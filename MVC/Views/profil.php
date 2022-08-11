@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,31 +6,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
+     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=a1cfee86208daf8f5d624e8ee9c34556">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap1.min.css?h=a1cfee86208daf8f5d624e8ee9c34556">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
-        <div class="container"><a class="navbar-brand text-capitalize js-scroll-trigger" href="#page-top" style="font-family: 'Open Sans', sans-serif;font-size: 20px;">Vroommm</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+   <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="/post">Vroommm</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div
+                class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Gestion publication</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Message</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login.php">Deconnection</a></li>
-                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/post">Acceuil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/about_user">A propos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/contact_user">Contactez-nous</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/login">Deconnetion</a></li>
+                    
                 </ul>
-            </div>
+                
+                
+        </div>
         </div>
     </nav>
     <header class="masthead bg-primary text-white text-center">
-        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="/assets/img/profile.png?h=ca1ddcee1cb057489d44a94e63b7fbc4">
-            <h1>Administrateur</h1>
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="./upload/<?=$_SESSION['picture'];?>?h=ca1ddcee1cb057489d44a94e63b7fbc4" id="profile" >
+            <h1><?= $_SESSION['user'];?></h1>
             <hr class="star-light">
         </div>
     </header>
@@ -37,7 +43,19 @@
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary">Publication</h2>
             <hr class="star-dark mb-5">
-            <div class="row"></div>
+            <div class="row">
+                <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <h2 class="section-heading"><?=$_SESSION['title'];?></h2>
+                    <p><?=$_SESSION['description'];?></p>
+                        <img class="img-fluid" src="/upload/<?=$_SESSION['image_name'];?>">
+                        
+            </div>
+        </div>
+    </article>
+            </div>
         </div>
     </section>
     <section id="contact"></section>
@@ -169,6 +187,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="/assets/js/script1.min.js?h=07e07724e24c1177318fe5ed6f948165"></script>
+    <script src="/assets/js/script.min.js?h=07e07724e24c1177318fe5ed6f948165"></script>
 </body>
 
 </html>
