@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 
@@ -41,7 +42,7 @@
                     <div class="form-row">
                         <div class="col-md-12 content-right">
                             <input type="submit" class="btn btn-primary form-btn" role="button" value="PUBLIER" name="btn">
-                            <a class="btn btn-danger form-btn" role="button" href="/post">ANNULER</a></div>
+                            <a class="btn btn-danger form-btn" role="button" href="/post.php">ANNULER</a></div>
                     </div>
                 </div>
             </div>
