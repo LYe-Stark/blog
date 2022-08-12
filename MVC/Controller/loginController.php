@@ -14,8 +14,10 @@ if(isset($_POST["btn"])){
 if($user){
         $hash_password =$user["password"];
         if(password_verify($password,$hash_password)){
-            session_start(); // obligatoire
-            $_SESSION["id"]=$user["idU"];
+            session_start(); 
+            // obligatoire
+            $_SESSION["idu"]=$user["idu"];
+            
             $_SESSION['user']=$user["nom"]." ".$user["prenom"]; //pour enregistrer une session 
             
             header("location:./post");

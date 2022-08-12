@@ -41,7 +41,7 @@ require_once("../Controller/loginController.php");
                     </form>
                     <!-- End: Login form -->
                     <!-- Start: Forgot password -->
-                    <p class="mt-3 mb-0" style="font-size: 15PX;width: 350px;">Vous n'aviez pas de compte ?&nbsp;  <a href="/Inscription.php">Inscrivez-vous</a> </p>
+                    <p class="mt-3 mb-0" style="font-size: 15PX;width: 350px;">Vous n'aviez pas de compte ?&nbsp;  <a href="/inscription">Inscrivez-vous</a> </p>
                     <!-- End: Forgot password -->
                 </div>
                 <!-- End: Login container -->

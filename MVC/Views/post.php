@@ -38,7 +38,7 @@
                     <div class="post-heading">
                         <h1>Explorez les publications, et postez&nbsp; !</h1>
                         <h2 class="subheading">+ 1 millions de publications pour vous .</h2><span class="meta">Postez et explorez c'est fun.........................</span>
-                        <a href="creat.php"><button class="btn btn-primary" id="poster-raduis" type="button" style="margin-top: 200px;margin-left: 200px;">Créez une publication</button></a>
+                        <a href="creat"><button class="btn btn-primary" id="poster-raduis" type="button" style="margin-top: 200px;margin-left: 200px;">Créez une publication</button></a>
                     </div>
                 </div>
             </div>
