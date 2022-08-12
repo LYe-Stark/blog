@@ -27,7 +27,7 @@ $extension = strtolower(end($tabExtension));
 $extensions = ['jpg', 'png', 'jpeg', 'gif'];
 if(in_array($extension, $extensions)){
     
-     move_uploaded_file($tmpname,"./upload/".$image_name);
+     move_uploaded_file($tmpname,"../upload/".$image_name);
 }
 else{
     echo "Mauvaise extension";
