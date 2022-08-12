@@ -13,7 +13,7 @@ if(isset($_POST["btn"])){
     $description =filter($_POST["description"]);
     $date =date("d-m-Y");
     
-  $db = new PDO("mysql:host=localhost;dbname=blog","paterne","Lye2003");
+  $db = new PDO("mysql:host=localhost;dbname=blog","Vl","gera123");
 
    
    $id =$_SESSION["id"];

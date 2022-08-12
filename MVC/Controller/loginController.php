@@ -18,7 +18,7 @@ if($user){
             $_SESSION["id"]=$user["idU"];
             $_SESSION['user']=$user["nom"]." ".$user["prenom"]; //pour enregistrer une session 
             
-            header("location:./post.php");
+            header("location:./post");
         }else{
             echo("Mot de passe incoorect");
         }
