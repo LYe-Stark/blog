@@ -39,25 +39,47 @@
             <hr class="star-light">
         </div>
     </header>
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="text-uppercase text-center text-secondary">Publication</h2>
-            <hr class="star-dark mb-5">
-            <div class="row">
-                <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto">
-                    <h2 class="section-heading"><?=$_SESSION['title'];?></h2>
-                    <p><?=$_SESSION['description'];?></p>
-                        <img class="img-fluid" src="/upload/<?=$_SESSION['image_name'];?>">
-                        
-            </div>
-        </div>
-    </article>
-            </div>
-        </div>
-    </section>
+
+<center>
+ <section style="min-width:60em;max-width:67em;min-height:46em;height:auto;border:4px solid #1045DAC9;border-radius:1em;box-shadow: rgba(0, 0, 0, 0.56) 0px 1px 20px 5px;">
+                                                                   
+                                <table  class="table" >
+        
+
+                                    <?php
+                                        $idUser=$_SESSION["idU"];
+
+                                      require_once("../Model/profilModel.php");
+                                        
+                                        while($data=$query->fetch()) { 
+                                    ?>
+
+                                        <tbody>
+                                            <tr style="border-bottom: 4px solid #4801FF;min-height:20em;height:auto;display:list;">
+                                                
+
+                                                <td style="padding-left:1em;min-width:5em;height:auto;text-align:center;">
+                                                    
+                                                     <?php echo $data['title']; ?><br>
+                                                        <p></p>
+                                                     <?php echo $data['description']; ?><br>
+                                                      <img class="img-fluid" src="/upload/<?=$data['image_name'];?>">
+                                                        <p></p>
+                                                   
+                                                    
+                                                </td>            
+                                            </tr>
+                                        </tbody>
+                                       
+                                    <?php
+                                    }
+                                    ?>
+                                </table>
+                    </section> 
+</center>   
+
+  
+
     <section id="contact"></section>
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright ©&nbsp;Brand 2018</small></div>
