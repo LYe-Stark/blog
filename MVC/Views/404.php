@@ -29,7 +29,7 @@
     </nav>
     <header class="masthead bg-primary text-white text-center">
         <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="/assets/img/profile.png?h=ca1ddcee1cb057489d44a94e63b7fbc4">
-            <h1>ERREUR 404 PAGE NOT FOUND</h1>
+            <h1>ERREUR 404 La PAGE N'EST PAS DISPONIBLE</h1>
             <hr class="star-light">
         </div>
     </header>
